@@ -124,12 +124,7 @@ public class InitXlet implements Xlet, UserEventListener
                                         long currentTime = System.currentTimeMillis();
                                         if (currentTime - startTime >= timeout && c == 0)
                                         {
-                                            // Auto-select: lapse when supported, poops for 12.50/12.52
-                                            if (lapseSupported) {
-                                                c = BUTTON_X; // Select Lapse
-                                            } else {
-                                                c = BUTTON_X; // Select Poops (for 12.50/12.52)
-                                            }
+                                            c = BUTTON_X;
                                             autoSelected = true;
                                             break;
                                         }
